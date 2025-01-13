@@ -13,11 +13,15 @@ public class Player : MonoBehaviour
 
     private void Start ()
     {
-        
+        //initialize seed UI 
+        _numSeedsLeft = _numSeeds; 
+        _numSeedsPlanted = 0; 
+        _plantCountUI.UpdateSeeds(_numSeedsLeft, _numSeedsPlanted); 
     }
 
     private void Update()
     {
+        //WASD movement for player 
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical"); 
 
@@ -28,6 +32,6 @@ public class Player : MonoBehaviour
 
     public void PlantSeed ()
     {
-        
+
     }
 }
